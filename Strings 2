@@ -1,0 +1,12 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	String := "t e s t e"
+	fmt.Println(String)
+	fmt.Println(strings.ReplaceAll(String, " ", ""))
+}
