@@ -1,0 +1,20 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("Digite uma string ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	if strings.ContainsAny(frase1, "0123456789") {
+		fmt.Println("Esta string contém um número. ")
+	} else {
+		fmt.Println("Esta string não contém um número. ")
+	}
+}
