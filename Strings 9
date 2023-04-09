@@ -1,0 +1,21 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	var n1, n2 string
+	fmt.Println("Digite uma string ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	fmt.Println("Qual letra você quer substituir? ")
+	fmt.Scan(&n1)
+	fmt.Println("Por qual letra você quer substituir? ")
+	fmt.Scan(&n2)
+	fmt.Println(strings.ReplaceAll(frase1, n1, n2))
+}
