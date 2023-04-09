@@ -1,0 +1,21 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Println("Digite uma frase ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	if _, err := strconv.ParseFloat(frase1, 64); err == nil {
+		fmt.Println("É um float. ")
+	} else {
+		fmt.Println("Não é um float. ")
+	}
+}
