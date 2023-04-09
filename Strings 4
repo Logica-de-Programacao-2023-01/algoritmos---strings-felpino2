@@ -1,0 +1,23 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Println("Digite uma frase ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	fmt.Println("Digite outra frase ")
+	scanner.Scan()
+	frase2 := scanner.Text()
+	if frase1 == frase2 {
+		fmt.Println("As frases são iguais. ")
+	} else {
+		fmt.Println("As frases são diferentes. ")
+	}
+}
