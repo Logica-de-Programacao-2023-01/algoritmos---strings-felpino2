@@ -1,0 +1,21 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("Digite uma string ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	_, err := strconv.Atoi(frase1)
+	if err != nil {
+		fmt.Println("A string não é uma sequência. ")
+	} else {
+		fmt.Println("A string possui apenas números. ")
+	}
+}
