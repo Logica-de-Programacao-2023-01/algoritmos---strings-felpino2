@@ -1,0 +1,26 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("Digite uma string ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	if string(frase1[0]) == strings.ToLower(string(frase1[0])) {
+		contador := 1
+		for _, letra := range frase1 {
+			if string(letra) == strings.ToUpper(string(letra)) {
+				contador++
+			}
+		}
+		fmt.Printf("A string %s possui %d palavras", frase1, contador)
+	} else {
+		fmt.Println("Não está em camelCase")
+	}
+}
