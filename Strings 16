@@ -1,0 +1,23 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("Digite uma string ")
+	scanner.Scan()
+	frase1 := scanner.Text()
+	fmt.Println("Digite outra string ")
+	scanner.Scan()
+	frase2 := scanner.Text()
+	if strings.Contains(frase1, frase2) == true {
+		fmt.Println("A segunda string está contida na primeria")
+	} else {
+		fmt.Println("A string não está contida na outra")
+	}
+}
