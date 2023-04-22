@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+	palavra := "amor"
+	palavra2 := "roma"
+
+	if len(palavra) != len(palavra2) {
+		fmt.Println("As palavras não são anagramas. ")
+	}
+
+	contador := 0
+	for i := 0; i < len(palavra); i++ {
+		for j := 0; j < len(palavra2); j++ {
+			if palavra[i] == palavra2[j] {
+				contador++
+			}
+		}
+	}
+	if contador == len(palavra) {
+		fmt.Println("Essas palavras são anagramas")
+	} else {
+		fmt.Println("SOCORRO")
+	}
+}
